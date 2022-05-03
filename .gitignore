@@ -328,5 +328,5 @@ me/media/
 
 .pytest_cache/
 .ipython/
-.env
+
 .envs/*

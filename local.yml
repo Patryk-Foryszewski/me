@@ -1,4 +1,4 @@
-version: '3'
+version: '3.7'
 
 volumes:
   me_local_postgres_data: {}
@@ -11,7 +11,7 @@ services:
       dockerfile: ./compose/local/django/Dockerfile
     image: me_local_django
     container_name: me_local_django
-    platform: linux/x86_64
+
     depends_on:
       - postgres
       - redis
@@ -40,7 +40,7 @@ services:
   docs:
     image: me_local_docs
     container_name: me_local_docs
-    platform: linux/x86_64
+
     build:
       context: .
       dockerfile: ./compose/local/docs/Dockerfile
